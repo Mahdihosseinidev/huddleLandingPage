@@ -1,0 +1,149 @@
+@import url('./_footer.css');
+@import url('./_users.css');
+
+:root {
+    --pink: #ff8ed6;
+    --text-color: #002531;
+}
+
+
+/* RESET CSS */
+
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+ol,ul,li{
+    list-style-type: none;
+}
+.img_responsive{
+    width: 100%;
+    height: auto;
+}
+.mt-100{
+    margin-top: 34px;
+    margin-bottom: 40px;
+}
+.my-150{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.container__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.container__header div a{
+    border: 1px solid var(--pink);
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: var(--pink);
+    font-size: 14px;
+    box-shadow: 0px 0px 7px -2px;
+    text-shadow: 0px 0px 1px;
+}
+.intro{
+    text-align: center;
+    margin-top: 180px;
+}
+.intro h2{
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+.intro p{
+    font-size: 14px;
+    width: 38%;
+    margin: 0 auto;
+    margin-bottom:25px ;
+}
+
+.btn__getstart {
+    background-color: #fd53c0;
+    color: #fff;
+    padding: 15px 95px;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 8px 0px #767676;
+}
+
+.btn__getstart:hover {
+    background-color: #ff8ed6;
+    text-shadow: 0px 0px 1px var(--pink);
+    color: #fdfcfd;
+}
+
+.mockup{
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+.mockup img{
+    width: 100%;
+    height: auto;
+}
+
+.communities,.messages{
+    display: flex;
+    justify-content: center;
+    
+}
+.communities h3 , .messages h3{
+    font-size: 5.9vw;
+    color: var(--text-color);
+
+}
+.communities p , .messages p{
+    color: #babec1;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+.img_grow{
+    text-align: center;
+}
+.img_grow img{
+    width: 80%;
+}
+.text-grow{
+    color: var(--text-color);
+}
+
+.img_flowing img{
+    width: 80%;
+}
+.text-flowing{
+    color: var(--text-color);
+}
+
+.get__start{
+    text-align: center;
+}
+.get__start h2{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:576px){
+    .communities div h3 ,  .messages div h3{
+        font-size: 80px;
+    }
+    .communities div p , .messages div p{
+        font-size: 20px;
+    }
+
+}
+
+.bg-top img , .bg-bottom img , .bg-footer img{
+    width: 100%;
+    height: auto;
+}
