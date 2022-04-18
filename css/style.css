@@ -1,6 +1,3 @@
-@import url('./_footer.css');
-@import url('./_users.css');
-
 :root {
     --pink: #ff8ed6;
     --text-color: #002531;
@@ -132,18 +129,78 @@ ol,ul,li{
 .get__start h2{
     margin-bottom: 20px;
 }
+.bg-top img , .bg-bottom img , .bg-footer img{
+    width: 100%;
+    height: auto;
+}
 
-@media screen and (max-width:576px){
+/* ! footer */
+.footer{
+    height: auto;
+    background-color: #002531;
+}
+
+.footer .footer_media h4{
+    margin-top: 45px;
+    color: #fff;
+    font-size: 15px;
+    width: 81%;
+    margin-bottom: 27px;
+    font-weight: 300;
+}
+
+.footer .footer_media .phone a , .footer .footer_media .email a{
+    color: #f6fbff;
+}
+.footer .footer_media .social_media a{
+    color: #f6fbff;
+    font-size: 25px;
+    margin-right: 23px;
+}
+
+.newsletter input[type='email']{
+    outline: none;
+    width: 58%;
+    padding: 10px;
+    border-radius: 11px;
+    border: none;
+}
+.newsletter input[type='submit']{
+    width: 30%;
+    background-color: #fd53c0;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+@media  screen and (max-width : 576px) {
     .communities div h3 ,  .messages div h3{
         font-size: 80px;
     }
     .communities div p , .messages div p{
         font-size: 20px;
     }
+    .newsletter input[type='email']{
+        outline: none;
+        width: 100%;
+        padding: 10px;
+        border-radius: 11px;
+        border: none;
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter input[type='submit']{
+        align-self: end;
+    }
 
 }
 
-.bg-top img , .bg-bottom img , .bg-footer img{
-    width: 100%;
-    height: auto;
+/* ! users  */
+.wrapper_user{
+    background-color: #f6fbff;
 }
