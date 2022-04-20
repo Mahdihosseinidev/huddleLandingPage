@@ -1,8 +1,7 @@
-@import url('./_footer.css');
-@import url('./_users.css');
-
 :root {
-    --pink: #ff8ed6;
+    --pink: #fd53c0;
+    --white: #fff;
+    --pink-light: #ff8ed6;
     --text-color: #002531;
 }
 
@@ -14,10 +13,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    min-width: 400px;
+}
 
 a {
     text-decoration: none;
     
+}
+input, button {
+    outline: none;
+    border: none;
 }
 
 ol,ul,li{
@@ -41,14 +47,20 @@ ol,ul,li{
     justify-content: space-between;
     padding: 20px 0;
 }
-.container__header div a{
-    border: 1px solid var(--pink);
+.container__header__btn{
+    border: 1px solid var(--pink-light);
     padding: 10px 30px;
     border-radius: 25px;
-    color: var(--pink);
+    color: var(--pink-light);
     font-size: 14px;
     box-shadow: 0px 0px 7px -2px;
     text-shadow: 0px 0px 1px;
+    transition: all 0.4s linear;
+}
+.container__header__btn:hover {
+    border: 1px solid transparent;
+    background-color: var(--pink);
+    color: var(--white);
 }
 .intro{
     text-align: center;
@@ -57,6 +69,7 @@ ol,ul,li{
 .intro h2{
     color: var(--text-color);
     margin-bottom: 30px;
+    font-size: 50px;
 }
 .intro p{
     font-size: 14px;
@@ -66,20 +79,21 @@ ol,ul,li{
 }
 
 .btn__getstart {
-    background-color: #fd53c0;
-    color: #fff;
+    background-color: var(--pink);
+    color: var(--white);
     padding: 15px 95px;
     display: inline-block;
     margin-top: 15px;
     font-size: 18px;
     border-radius: 30px;
     box-shadow: 0px 2px 8px 0px #767676;
+    transition: all 0.4s linear;
 }
 
 .btn__getstart:hover {
-    background-color: #ff8ed6;
-    text-shadow: 0px 0px 1px var(--pink);
-    color: #fdfcfd;
+    background-color: var(--pink-light);
+    text-shadow: 0px 0px 1px var(--pink-light);
+    color: var(--text-color);
 }
 
 .mockup{
@@ -132,18 +146,76 @@ ol,ul,li{
 .get__start h2{
     margin-bottom: 20px;
 }
+.bg-top img , .bg-bottom img , .bg-footer img{
+    width: 100%;
+    height: auto;
+}
 
-@media screen and (max-width:576px){
+/* ! footer */
+.footer{
+    height: auto;
+    background-color: #002531;
+}
+
+.footer .footer_media h4{
+    margin-top: 45px;
+    color: var(--white);
+    font-size: 15px;
+    width: 81%;
+    margin-bottom: 27px;
+    font-weight: 300;
+}
+
+.footer .footer_media .phone a , .footer .footer_media .email a{
+    color: #f6fbff;
+}
+.footer .footer_media .social_media a{
+    color: #f6fbff;
+    font-size: 25px;
+    margin-right: 23px;
+}
+
+.newsletter input[type='email']{
+    width: 68%;
+    padding: 10px 20px;
+    border-radius: 100px;
+}
+.newsletter input[type='submit']{
+    width: 30%;
+    background-color: var(--pink);
+    border-radius: 100px;
+    padding-block: 10px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 17px;
+    transition: all 0.4s linear;
+}
+.newsletter input[type='submit']:hover {
+    background-color: var(--pink-light);
+    color: var(--text-color);
+}
+
+@media  screen and (max-width : 576px) {
     .communities div h3 ,  .messages div h3{
         font-size: 80px;
     }
     .communities div p , .messages div p{
         font-size: 20px;
     }
+    .newsletter input[type='email']{
+        width: 100%;
+    }
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter input[type='submit']{
+        width: 100%;
+    }
 
 }
 
-.bg-top img , .bg-bottom img , .bg-footer img{
-    width: 100%;
-    height: auto;
+/* ! users  */
+.wrapper_user{
+    background-color: #f6fbff;
 }
